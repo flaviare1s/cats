@@ -1,29 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { App } from './App.jsx'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import './index.css'
+import React from 'react';
+import { GlobalProvider } from './GlobalContext.jsx';
+import { App } from './App.jsx';
+import { Route } from 'react-router-dom';
+import { CatLists } from './components/CatLists.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div><App /></div>,
-  },
-  {
-    path: "/login",
-    element: <div>testando rotas</div>,
-  },
-  {
-    path: "/cats",
-    element: <div>gatinhos</div>,
-  },
-]);
+const AppWithRoutes = (
+  <GlobalProvider>
+    <Route exact path="/" component={App} />
+    <Route path="/login" component={() => <div>Testando rotas</div>} />
+    <Route path="/cats" component={CatLists} />
+  </GlobalProvider>
+);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+export default AppWithRoutes;

@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../GlobalContext'; 
 
-export const CatLists = ({ cats }) => {
+export const CatLists = () => {
+  const { cats } = useContext(GlobalContext);
+
   return (
     <div>
-      <h2>Cats</h2>
+      <h1>Cat Lists</h1>
       <ul>
         {cats.map(cat => (
-          <li key={cat.id}>{cat.name}</li>
+          <li key={cat.id}>
+            <p>Name: {cat.name}</p>
+            <p>Description: {cat.description}</p>
+            <p>Breed: {cat.breed.name}</p>
+            <p>Owner Email: {cat.owner_email}</p>
+            {cat.photo.url && <img src={cat.photo.url} alt={cat.name} />}
+          </li>
         ))}
       </ul>
     </div>
