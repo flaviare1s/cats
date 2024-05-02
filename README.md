@@ -12,3 +12,7 @@ Rode o comando a seguir para instalar a dependência do Modal:
 
 npm install --save react-modal
 
+Link da demo (Válido por 7 dias): https://we.tl/t-QKgxbG3d3I
+
+
+
