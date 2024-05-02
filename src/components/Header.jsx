@@ -18,7 +18,7 @@ export const Header = () => {
   };
 
   return (
-    <div className='bg-green-500 text-white p-5 flex flex-row justify-between items-center w-full fixed mt-12'>
+    <div className='bg-green-500 text-white p-5 flex flex-row justify-between items-center w-full fixed mt-12 z-0'>
       <a href="#" onClick={fetchCats}>Cats List</a>
       <div>
         <button className='mr-3'>+ Add a cat</button>

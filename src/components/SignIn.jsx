@@ -1,9 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import './SignIn.css'
+
 Modal.setAppElement('#root');
 
-export const SignIn = () => {
+export default function SignIn () {
   
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -17,17 +17,17 @@ export const SignIn = () => {
 
   return (
     <div>
-      <button className='abrirModal' onClick={abrirModal}>Sign In</button>
+      <button className='abrirModal bg-green-500 text-white p-5 flex flex-row justify-between items-end absolute' onClick={abrirModal}>Sign In</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={fecharModal}
         contentLabel="Abrir Sign In"
       >
         
-        <button className='fecharModal' onClick={fecharModal}>x</button>
+        <button className='fecharModal' onClick={fecharModal}>X</button>
         <form className="email">
-            <input type="email" name="" id="" placeholder='Inserir E-mail'/>
-            <input type="password" name="" id="" placeholder='Criar Senha' />
+            <input type="email" name="" id="" placeholder='E-mail'/>
+            <input type="password" name="" id="" placeholder='Password' />
             <button className='signin' >Sign in</button>
         </form>
     
