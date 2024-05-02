@@ -24,7 +24,7 @@ export const Header = () => {
         <button className='mr-3'>+ Add a cat</button>
         <i className="fa-solid fa-user"></i>
       </div>
-      {/* <CatLists cats={cats} /> */}
+      <CatLists cats={cats} />
     </div>
   );
 };
