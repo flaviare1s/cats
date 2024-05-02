@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import './SignIn.css'
 Modal.setAppElement('#root');
 
-function SignIn() {
+export const SignIn = () => {
   
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -35,5 +35,3 @@ function SignIn() {
     </div>
   );
 }
-
-export default SignIn
